@@ -1,9 +1,9 @@
 import { defineStore } from "pinia";
 
-export let useModalStore = defineStore('modal', {
+export let useModalStore = defineStore("modal", {
     state: () => ({
         show: true,
-        title: 'Stuff',
-        footer: 'Closing',
-    })
-})
+        title: "Stuff",
+        footer: "Closing",
+    }),
+});

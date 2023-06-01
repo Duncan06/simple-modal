@@ -6,7 +6,7 @@ let modal = useModalStore();
 
 <template>
     <div class="flex mt-4 p-4 bg-blue-200 rounded-t-lg">
-        <div style="width: 600px;">{{ modal.title }}</div>
+        <div style="width: 600px">{{ modal.title }}</div>
         <button class="header-closer" @click="modal.show = false">
             &times;
         </button>
@@ -26,8 +26,7 @@ let modal = useModalStore();
     cursor: pointer;
 }
 .header-closer:active {
-    transform: rotate(90deg); 
+    transform: rotate(90deg);
     transition: transform 1s;
-    
 }
 </style>
