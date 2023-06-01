@@ -2,12 +2,11 @@
 import ModalHeader from "./ModalHeader.vue";
 import ModalBody from "./ModalBody.vue";
 import ModalFooter from "./ModalFooter.vue";
-import { useModalStore } from '../../stores/ModalStore';
+import { useModalStore } from "../../stores/ModalStore";
 
 let modal = useModalStore();
 
-defineProps({
-});
+defineProps({});
 </script>
 
 <template>
@@ -25,13 +24,12 @@ defineProps({
             <button @click="modal.show = true">Click me!</button>
         </div>
     </div>
-    
 </template>
 
 <style>
-    .modal {
-        width: 600px;
-        height: 300px;
-        margin: 24px;
-    }
+.modal {
+    width: 600px;
+    height: 300px;
+    margin: 24px;
+}
 </style>
