@@ -1,5 +1,5 @@
 <script setup>
-    import Modal from './Modal/Modal.vue';
+import Modal from "./Modal/Modal.vue";
 </script>
 
 <template>
