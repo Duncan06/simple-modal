@@ -5,17 +5,33 @@ import ModalFooter from "./ModalFooter.vue";
 import { useModalStore } from '../../stores/ModalStore';
 
 let modal = useModalStore();
+
+defineProps({
+});
 </script>
 
 <template>
     <div>
-        This is here
-        <ModalHeader></ModalHeader>
+        <div class="modal" v-if="modal.show">
+            <ModalHeader></ModalHeader>
 
-        <div>
-            <ModalBody></ModalBody>
+            <div>
+                <ModalBody><slot></slot></ModalBody>
+            </div>
+
+            <ModalFooter></ModalFooter>
         </div>
-
-        <ModalFooter></ModalFooter>
+        <div class="closed-dispaly" v-else>
+            <button @click="modal.show = true">Click me!</button>
+        </div>
     </div>
+    
 </template>
+
+<style>
+    .modal {
+        width: 600px;
+        height: 300px;
+        margin: 24px;
+    }
+</style>

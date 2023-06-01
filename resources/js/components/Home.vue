@@ -4,5 +4,5 @@ import Modal from "./Modal/Modal.vue";
 
 <template>
     <div>Hello</div>
-    <Modal></Modal>
+    <Modal>This is here</Modal>
 </template>

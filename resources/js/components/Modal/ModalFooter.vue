@@ -1,3 +1,11 @@
-<script setup></script>
+<script setup>
+import { useModalStore } from '../../stores/ModalStore';
 
-<template></template>
+let modal = useModalStore();
+</script>
+
+<template>
+    <div class="bg-green-100 rounded-b-lg p-4">
+        {{ modal.footer }}
+    </div>
+</template>
