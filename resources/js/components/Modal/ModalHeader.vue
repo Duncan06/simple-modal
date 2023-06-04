@@ -2,12 +2,14 @@
 import { useModalStore } from "../../stores/ModalStore";
 
 let modal = useModalStore();
+
+let emit = defineEmits(['close']);
 </script>
 
 <template>
     <div class="flex mt-4 p-4 bg-blue-200 rounded-t-lg">
         <div style="width: 600px">{{ modal.title }}</div>
-        <button class="header-closer" @click="modal.show = false">
+        <button class="header-closer" @click="$emit('close')">
             &times;
         </button>
     </div>
