@@ -1,7 +1,5 @@
 <script setup>
-import { useModalStore } from '../../stores/ModalStore';
 
-let modal = useModalStore();
 </script>
 
 <template>

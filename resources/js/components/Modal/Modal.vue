@@ -11,13 +11,17 @@ defineProps({
 <template>
     <div>
         <div v-if="show" class="modal">
-            <ModalHeader @close="$emit('close')"></ModalHeader>
+            <ModalHeader @close="$emit('close')">
+                <slot name="header"></slot>
+            </ModalHeader>
 
-            <div>
+            <main>
                 <ModalBody><slot></slot></ModalBody>
-            </div>
+            </main>
 
-            <ModalFooter></ModalFooter>
+            <ModalFooter>
+                <slot name="footer"></slot>
+            </ModalFooter>
         </div>
     </div>
 </template>

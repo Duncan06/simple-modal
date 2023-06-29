@@ -7,7 +7,15 @@ let showModal = ref(false);
 
 <template>
     <div>Hello</div>
-    <Modal :show="showModal" @close="showModal = false">This is here</Modal>
+    <Modal :show="showModal" @close="showModal = false">
+        <template #header>
+            <div>Hey there</div>
+        </template>
+        <div>This is the rest</div>
+        <template #footer>
+            <div>Bottom</div>
+        </template>
+    </Modal>
     <div class="closed-dispaly" v-if="!showModal">
         <button @click="showModal = true">Click me!</button>
     </div>
