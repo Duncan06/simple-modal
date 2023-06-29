@@ -18,8 +18,6 @@ let emit = defineEmits(['close']);
 <style>
 .header-closer {
     display: flex;
-    width: 8px;
-    height: 26px;
     color: #999;
     justify-content: end;
 }
@@ -28,6 +26,7 @@ let emit = defineEmits(['close']);
     cursor: pointer;
 }
 .header-closer:active {
+    transform-origin: 6px 13.5px;
     transform: rotate(90deg);
     transition: transform 1s;
 }
