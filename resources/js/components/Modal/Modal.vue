@@ -5,12 +5,21 @@ import ModalFooter from "./ModalFooter.vue";
 
 defineProps({
     show: Boolean,
+    modalType: { required: false, type: String, default: "modal" },
+    modalStyle: { required: false, type: String, default: "modal" },
 });
 </script>
 
 <template>
     <div>
-        <div v-if="show" class="modal">
+        <div
+            v-if="show"
+            :class="{
+                'sm-modal': modalType === 'small',
+                'lg-modal': modalType === 'large',
+                modal: modalType === 'modal',
+            }"
+        >
             <ModalHeader @close="$emit('close')">
                 <slot name="header"></slot>
             </ModalHeader>
@@ -31,5 +40,15 @@ defineProps({
     width: 600px;
     height: 300px;
     margin: 24px;
+}
+.sm-modal {
+    width: 400px;
+    height: 200px;
+    margin: 20px;
+}
+.lg-modal {
+    width: 800px;
+    height: 400px;
+    margin: 28px;
 }
 </style>

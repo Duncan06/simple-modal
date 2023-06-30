@@ -7,7 +7,7 @@ let showModal = ref(false);
 
 <template>
     <div>Hello</div>
-    <Modal :show="showModal" @close="showModal = false">
+    <Modal :show="showModal" @close="showModal = false" modal-type="large">
         <template #header>
             <div>Hey there</div>
         </template>

@@ -5,8 +5,8 @@ let emit = defineEmits(['close']);
 </script>
 
 <template>
-    <header class="flex mt-4 p-4 bg-blue-200 rounded-t-lg">
-        <div style="width: 600px">
+    <header class="flex mt-4 p-4 bg-blue-200 rounded-t-lg justify-between">
+        <div>
             <slot></slot>
         </div>
         <button class="header-closer" @click="$emit('close')">
