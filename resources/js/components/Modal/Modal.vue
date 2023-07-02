@@ -20,15 +20,15 @@ defineProps({
                 modal: modalType === 'modal',
             }"
         >
-            <ModalHeader @close="$emit('close')">
+            <ModalHeader @close="$emit('close')" :modal-style="modalStyle">
                 <slot name="header"></slot>
             </ModalHeader>
 
             <main>
-                <ModalBody><slot></slot></ModalBody>
+                <ModalBody :modal-style="modalStyle"><slot></slot></ModalBody>
             </main>
 
-            <ModalFooter>
+            <ModalFooter :modal-style="modalStyle">
                 <slot name="footer"></slot>
             </ModalFooter>
         </div>
